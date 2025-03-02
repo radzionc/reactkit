@@ -4,7 +4,7 @@
 # - BUCKET: S3 bucket name
 # - DISTRIBUTION_ID: CloudFront distribution ID
 
-yarn build
+pnpm build
 
 OUT_DIR=out
 

@@ -1,11 +1,8 @@
 {
   "name": "radzionkit",
-  "packageManager": "yarn@4.6.0",
+  "packageManager": "pnpm@10.5.2",
   "version": "0.0.1",
   "private": true,
-  "workspaces": [
-    "./**"
-  ],
   "devDependencies": {
     "@eslint/compat": "^1.2.7",
     "@eslint/eslintrc": "^3.3.0",
@@ -27,6 +24,7 @@
     "postinstall": "husky install",
     "format": "eslint --fix && prettier --write",
     "typecheck": "tsc --noEmit",
-    "sync-packages": "syncpack fix-mismatches"
+    "sync-packages": "syncpack fix-mismatches",
+    "upgrade-all": "./upgrade-all.sh"
   }
 }

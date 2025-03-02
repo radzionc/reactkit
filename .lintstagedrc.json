@@ -1,3 +1,5 @@
 {
-  "*.{js,ts,tsx,json}": ["yarn format"]
+  "*.{js,ts,tsx,json}": [
+    "pnpm format"
+  ]
 }

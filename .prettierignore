@@ -1,5 +1,4 @@
 .vscode
-.yarn
 .next
 out
 *.md

@@ -1,8 +1,8 @@
-import { DemoPage } from '@product/ui-demo/components/DemoPage'
 import { Spinner } from '@lib/ui/loaders/Spinner'
 import { Text } from '@lib/ui/text'
 import { HStack } from '@lib/ui/css/stack'
-import { makeDemoPage } from '@product/ui-demo/layout/makeDemoPage'
+import { makeDemoPage } from '../layout/makeDemoPage'
+import { DemoPage } from '../components/DemoPage'
 
 export default makeDemoPage(() => {
   return (

@@ -1,7 +1,7 @@
-import { DemoPage } from '@product/ui-demo/components/DemoPage'
 import { VStack } from '@lib/ui/css/stack'
 import { Text } from '@lib/ui/text'
-import { makeDemoPage } from '@product/ui-demo/layout/makeDemoPage'
+import { makeDemoPage } from '../layout/makeDemoPage'
+import { DemoPage } from '../components/DemoPage'
 
 export default makeDemoPage(() => {
   return (

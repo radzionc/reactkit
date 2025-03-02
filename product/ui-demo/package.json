@@ -13,6 +13,12 @@
   "dependencies": {
     "@emoji-mart/data": "^1.2.1",
     "@emoji-mart/react": "^1.1.1",
+    "@lib/analytics-ui": "workspace:*",
+    "@lib/countries": "workspace:*",
+    "@lib/countries-ui": "workspace:*",
+    "@lib/ui": "workspace:*",
+    "@lib/utils": "workspace:*",
+    "@product/ui-demo": "workspace:*",
     "@tanstack/react-query": "^5.66.11",
     "date-fns": "^4.1.0",
     "emoji-mart": "^5.6.0",

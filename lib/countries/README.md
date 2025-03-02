@@ -10,7 +10,7 @@ To ensure your country data is up-to-date, follow these steps:
 2. **Generate TypeScript Types and Records**: Run the following command to generate the TypeScript types and the country names record:
 
 ```sh
-yarn generate
+pnpm generate
 ```
 
 This command will create the necessary TypeScript files based on the updated `countries.json` data.

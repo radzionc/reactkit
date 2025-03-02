@@ -12,7 +12,7 @@ Follow the steps below to customize and prepare your app for deployment.
    Replace `light-mode-icon.svg` and `dark-mode-icon.svg` in the `icon` folder with your custom icons.  
    Generate the updated icons by running:
    ```bash
-   yarn generate-icons
+   pnpm generate-icons
    ```
 
 2. **Update the Banner Image**  

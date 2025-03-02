@@ -1,22 +1,25 @@
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
 .DS_Store
 
+# pnpm
 node_modules
+.pnpm-store/
+pnpm-lock.yaml
 
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Build
+**/dist/
+
+# Misc
 set_env_vars.sh
 credentials.json
 *.tsbuildinfo
 
-**/dist/
-
+# Terraform
 .terraform/
 *.backup
-set_env_vars.sh
 .terraform.lock.hcl
 **/lambda.zip

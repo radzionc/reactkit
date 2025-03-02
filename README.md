@@ -6,7 +6,7 @@ RadzionKit is the ultimate solution for developers looking to jumpstart their pr
 
 ## Monorepo Overview: Inside RadzionKit's Diverse Package Ecosystem
 
-RadzionKit takes advantage of Yarn Workspaces to streamline a monorepo setup, organizing code into two primary directories: `lib` and `product`. The `lib` folder houses generic code packages like `@lib/utils` or `@lib/ui`, designed to be project-agnostic and easily portable to any project without carrying over project-specific logic. On the other hand, the `product` directory houses example implementations, such as `@product/api` or `@product/ui-demo`, that serve as blueprints demonstrating how to integrate and adapt the `@lib` packages to the unique needs of your project. This thoughtful architecture not only streamlines the development process but also enhances the reusability of code, making it effortless to scale and modify your project as it grows.
+RadzionKit takes advantage of pnpm workspaces to streamline a monorepo setup, organizing code into two primary directories: `lib` and `product`. The `lib` folder houses generic code packages like `@lib/utils` or `@lib/ui`, designed to be project-agnostic and easily portable to any project without carrying over project-specific logic. On the other hand, the `product` directory houses example implementations, such as `@product/api` or `@product/ui-demo`, that serve as blueprints demonstrating how to integrate and adapt the `@lib` packages to the unique needs of your project. This thoughtful architecture not only streamlines the development process but also enhances the reusability of code, making it effortless to scale and modify your project as it grows.
 
 ### Lib Packages
 
@@ -44,21 +44,40 @@ RadzionKit takes advantage of Yarn Workspaces to streamline a monorepo setup, or
 
 ## Getting Started with RadzionKit: Launching Your New Project
 
-Kickstart your project using the RadzionKit GitHub template. You can remove any packages you don't need and use the ones under `@product` as a starting point for your app. There's no need to rename packages, as the naming convention separates reusable packages (`@lib`) from project-specific code (`@product`). Once you've cloned the template, install dependencies using `yarn`, and your setup is ready to go.
+Kickstart your project using the RadzionKit GitHub template. You can remove any packages you don't need and use the ones under `@product` as a starting point for your app. There's no need to rename packages, as the naming convention separates reusable packages (`@lib`) from project-specific code (`@product`). Once you've cloned the template, install dependencies using `pnpm install`, and your setup is ready to go.
 
-## Managing Dependencies & Versions
+## Package Management & Dependencies
 
-To upgrade to the latest version of Yarn, run the following command:
+This project uses [pnpm](https://pnpm.io/) for package management and workspace handling.
+
+### Working with pnpm
+
+- Install all dependencies: `pnpm install`
+- Add a dependency to the root: `pnpm add -w <package>`
+- Add a dependency to a workspace: `pnpm --filter @lib/ui add <package>`
+- Run a script in a workspace: `pnpm --filter @lib/ui <script>`
+- Run a script in all workspaces: `pnpm -r <script>`
+
+### Upgrading pnpm and Dependencies
+
+To upgrade pnpm to the latest version and update all dependencies across all workspaces, you can use the provided npm script:
 
 ```bash
-yarn set version stable
+pnpm upgrade-all
 ```
 
-To upgrade every dependency to the latest version, run the following command:
+Or run the script directly:
 
 ```bash
-yarn workspaces foreach --all exec yarn up "*"
+./upgrade-all.sh
 ```
+
+This script will:
+1. Update pnpm to the latest version
+2. Update the packageManager field in package.json
+3. Update all dependencies in all workspaces to their latest versions
+
+This will ensure you're using the latest version of pnpm and all dependencies across your monorepo.
 
 ## Examples Using RadzionKit
 

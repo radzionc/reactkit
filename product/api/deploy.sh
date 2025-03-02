@@ -1,4 +1,4 @@
-yarn build
+pnpm build
 cd dist
 
 zip -r ./$BUCKET_KEY *

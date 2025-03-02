@@ -1,4 +1,4 @@
-yarn build
+pnpm build
 cd dist
 
 BUCKET=tf-radzion-email-storage

@@ -2,6 +2,9 @@
   "name": "@lib/countries",
   "version": "0.0.1",
   "private": true,
+  "dependencies": {
+    "@lib/codegen": "workspace:*"
+  },
   "scripts": {
     "generate": "npx tsx codegen/generateCountries",
     "typecheck": "tsc --noEmit"

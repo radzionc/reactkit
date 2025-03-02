@@ -10,7 +10,7 @@
   },
   "scripts": {
     "transpile": "esbuild lambda.ts --bundle --minify --sourcemap --platform=node --target=es2020 --outfile=dist/index.js",
-    "build": "yarn clean & yarn transpile",
+    "build": "pnpm clean & pnpm transpile",
     "clean": "rm -rf ./dist lambda.zip",
     "start": "node dist/index.js",
     "typecheck": "tsc --noEmit"

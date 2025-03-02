@@ -1,11 +1,11 @@
-import { DemoPage } from '@product/ui-demo/components/DemoPage'
 import { Checkbox } from '@lib/ui/inputs/Checkbox/Checkbox'
 import { useState } from 'react'
 import { VStack } from '@lib/ui/css/stack'
 import { Text } from '@lib/ui/text'
 import { InfoIcon } from '@lib/ui/icons/InfoIcon'
-import { makeDemoPage } from '@product/ui-demo/layout/makeDemoPage'
 import { TimeoutMessage } from '@lib/ui/base/TimeoutMessage'
+import { makeDemoPage } from '../layout/makeDemoPage'
+import { DemoPage } from '../components/DemoPage'
 
 export default makeDemoPage(() => {
   const [one, setOne] = useState(false)
